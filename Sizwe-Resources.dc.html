@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><rect width="120" height="120" fill="#0075C9"/><text x="60" y="72" font-family="Mulish, sans-serif" font-size="34" font-weight="800" fill="#fff" text-anchor="middle">SW</text></svg></template>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/sanlam-design-system-c1c1421c-96ba-4b5b-9ab3-4ff6c2621b8d/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/sanlam-design-system-c1c1421c-96ba-4b5b-9ab3-4ff6c2621b8d/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/sanlam-design-system-c1c1421c-96ba-4b5b-9ab3-4ff6c2621b8d/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/sanlam-design-system-c1c1421c-96ba-4b5b-9ab3-4ff6c2621b8d/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/sanlam-design-system-c1c1421c-96ba-4b5b-9ab3-4ff6c2621b8d/tokens/effects.css">
+  <link rel="stylesheet" href="_ds/sanlam-design-system-c1c1421c-96ba-4b5b-9ab3-4ff6c2621b8d/styles.css">
+  <script src="_ds/sanlam-design-system-c1c1421c-96ba-4b5b-9ab3-4ff6c2621b8d/_ds_bundle.js"></script>
+  <style>
+    body { margin: 0; background: var(--surface-card); color: var(--text-body); font: var(--role-body); }
+    a { color: var(--text-link); text-decoration: none; }
+    a:hover { color: var(--text-link-hover); }
+  </style>
+</helmet>
+
+<div style="width:100%">
+
+  <header style="position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--border-subtle)">
+    <div style="height:3px;background:linear-gradient(90deg,var(--sl-blue) 0%,var(--sl-blue-congress) 100%)"></div>
+    <div style="max-width:1180px;margin:0 auto;padding:12px 28px;display:flex;align-items:center;gap:28px;flex-wrap:wrap">
+      <a href="Sizwe-Home.dc.html" style="display:flex;align-items:center;gap:18px;text-decoration:none">
+        <img src="assets/logo-sizwe-fs.svg" alt="Sizwe Financial Solutions" style="height:32px;width:auto;display:block">
+        <span style="width:1px;height:40px;background:var(--border-default)"></span>
+        <img src="assets/logo-kapital.svg" alt="Kapital BlouSter, gemagtig deur Sanlam" style="height:38px;width:auto;display:block">
+      </a>
+      <nav style="display:flex;gap:24px;margin-left:auto;flex-wrap:wrap;font:var(--role-body-sm);font-weight:var(--weight-semibold);align-items:center">
+        <a href="Sizwe-Home.dc.html" style="color:var(--text-body)">Home</a>
+        <a href="Sizwe-Group.dc.html" style="color:var(--text-body)">The group</a>
+        <a href="Sizwe-Products.dc.html" style="color:var(--text-body)">Products &amp; services</a>
+        <a href="Sizwe-Resources.dc.html" style="color:var(--sl-blue-congress);border-bottom:2px solid var(--color-primary);padding-bottom:3px">Resources</a>
+        <a href="Sizwe-Careers.dc.html" style="color:var(--text-body)">Careers</a>
+        <a href="Sizwe-Contact.dc.html" style="color:var(--text-body)">Contact</a>
+        <a href="Sizwe-Book.dc.html" style="text-decoration:none"><x-import component-from-global-scope="SanlamDesignSystem_c1c142.Button" variant="primary" size="sm" hint-size="120px,34px">Book a session</x-import></a>
+      </nav>
+    </div>
+  </header>
+
+  <section style="background:#323e48">
+    <div style="max-width:1180px;margin:0 auto;padding:44px 28px 40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px;align-items:end">
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <span style="font:var(--role-overline);letter-spacing:var(--tracking-caps);text-transform:uppercase;color:var(--sl-blue-200)">Client resources</span>
+        <h1 style="margin:0;font:var(--role-display);font-size:var(--text-4xl);color:#fff;letter-spacing:var(--tracking-tight);text-wrap:pretty">The questions clients ask us first.</h1>
+      </div>
+      <p style="margin:0;font:var(--role-body);font-size:var(--text-lg);line-height:var(--leading-relaxed);color:rgba(255,255,255,0.74);max-width:460px;text-wrap:pretty">Plain answers on what a first meeting involves, what to bring, what our Sanlam affiliation means, and how to change a policy you already hold.</p>
+    </div>
+  </section>
+
+  <section style="max-width:1180px;margin:0 auto;padding:40px 28px 56px;display:grid;grid-template-columns:minmax(220px,280px) minmax(0,1fr);gap:56px;align-items:start">
+
+    <div style="display:flex;flex-direction:column;gap:28px;position:sticky;top:100px">
+      <div style="display:flex;flex-direction:column;gap:4px">
+        <sc-for list="{{ topics }}" as="t" hint-placeholder-count="4">
+          <div onClick="{{ t.select }}" style="display:flex;align-items:center;gap:12px;padding:14px 16px;border-radius:var(--radius-md);cursor:pointer;background:{{ t.bg }}">
+            <span style="width:3px;align-self:stretch;border-radius:2px;background:{{ t.bar }}"></span>
+            <span style="display:flex;flex-direction:column;gap:2px">
+              <span style="font:var(--role-body);font-weight:var(--weight-bold);color:{{ t.fg }}">{{ t.label }}</span>
+              <span style="font:var(--role-caption);color:var(--text-muted)">{{ t.count }}</span>
+            </span>
+          </div>
+        </sc-for>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;padding:20px;border-radius:var(--radius-lg);background:var(--surface-tint)">
+        <div style="font:var(--role-body);font-weight:var(--weight-bold);color:var(--sl-blue-congress)">Not answered here?</div>
+        <p style="margin:0;font:var(--role-body-sm);color:var(--text-muted)">Ask an adviser directly. No charge, no obligation.</p>
+        <a href="tel:0780198359" style="font:var(--role-body-sm);font-weight:var(--weight-bold)">078 019 8359</a>
+        <a href="Sizwe-Book.dc.html" style="font:var(--role-body-sm);font-weight:var(--weight-bold)">Book a session →</a>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <h2 style="margin:0 0 8px;font:var(--role-h3);color:var(--sl-blue-congress);letter-spacing:var(--tracking-tight)">{{ activeLabel }}</h2>
+      <sc-for list="{{ questions }}" as="row" hint-placeholder-count="4">
+        <div style="border-top:1px solid var(--border-subtle)">
+          <div onClick="{{ row.toggle }}" style="display:flex;gap:20px;align-items:flex-start;justify-content:space-between;padding:18px 0;cursor:pointer">
+            <span style="font:var(--role-h4);color:var(--text-strong);text-wrap:pretty">{{ row.q }}</span>
+            <span style="flex:none;width:28px;height:28px;border-radius:999px;background:var(--surface-tint);color:var(--color-primary);display:flex;align-items:center;justify-content:center;transform:{{ row.rotate }}">
+              <x-import component-from-global-scope="SanlamDesignSystem_c1c142.Icon" name="chevron-down" hint-size="16px,16px"></x-import>
+            </span>
+          </div>
+          <sc-if value="{{ row.open }}" hint-placeholder-val="{{ true }}">
+            <div style="padding:0 0 22px;display:flex;flex-direction:column;gap:10px;max-width:680px">
+              <sc-for list="{{ row.a }}" as="para" hint-placeholder-count="2">
+                <p style="margin:0;font:var(--role-body);color:var(--text-muted);text-wrap:pretty">{{ para }}</p>
+              </sc-for>
+            </div>
+          </sc-if>
+        </div>
+      </sc-for>
+      <div style="border-top:1px solid var(--border-subtle)"></div>
+    </div>
+  </section>
+
+  <section style="background:var(--sl-blue-congress)">
+    <div style="max-width:1180px;margin:0 auto;padding:56px 28px;display:flex;gap:28px;flex-wrap:wrap;align-items:center;justify-content:space-between">
+      <div style="display:flex;flex-direction:column;gap:12px;max-width:560px">
+        <h2 style="margin:0;font:var(--role-h2);color:#fff;letter-spacing:var(--tracking-tight);text-wrap:pretty">Still not answered?</h2>
+        <p style="margin:0;font:var(--role-body);font-size:var(--text-lg);color:rgba(255,255,255,0.92)">Ask an adviser directly. No charge, no obligation.</p>
+      </div>
+      <a href="Sizwe-Book.dc.html" style="text-decoration:none"><x-import component-from-global-scope="SanlamDesignSystem_c1c142.Button" variant="primary" size="lg" hint-size="200px,52px">Book a session</x-import></a>
+    </div>
+  </section>
+
+  <footer style="background:#323e48;color:var(--sl-grey-300)">
+    <div style="max-width:1180px;margin:0 auto;padding:48px 28px 28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:32px">
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+          <img src="assets/logo-sizwe-fs-white.svg" alt="Sizwe Financial Solutions" style="height:30px;width:auto;display:block">
+          <span style="width:1px;height:22px;background:rgba(255,255,255,0.3)"></span>
+          <span style="font:var(--role-body);font-weight:var(--weight-bold);color:rgba(255,255,255,0.82)">Kapital Bluestar</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:9px">
+          <span style="font:var(--role-caption);color:rgba(255,255,255,0.6)">authorised by</span>
+          <img src="assets/logo-full-white.svg" alt="Sanlam" style="height:15px;width:auto;display:block">
+        </div>
+        <div style="font:var(--role-body-sm);color:rgba(255,255,255,0.72);max-width:280px">Sizwe Wealth is a client-focused financial services group of more than 50 advisers in Bloemfontein, comprising Kapital Bluestar and Kapital Accounting, in partnership with Sanlam.</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="font:var(--role-caption);text-transform:uppercase;letter-spacing:var(--tracking-caps);color:var(--sl-blue-300)">Visit us</div>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=21+Reid+St+Westdene+Bloemfontein+9301" style="font:var(--role-body-sm);color:#fff">21 Reid St, Westdene<br>Bloemfontein, 9301</a>
+        <div style="font:var(--role-body-sm);color:rgba(255,255,255,0.72)">Monday to Friday<br>8am – 5pm</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="font:var(--role-caption);text-transform:uppercase;letter-spacing:var(--tracking-caps);color:var(--sl-blue-300)">Contact</div>
+        <a href="tel:0780198359" style="font:var(--role-body-sm);color:#fff">078 019 8359</a>
+        <a href="mailto:info@sizwefs.co.za" style="font:var(--role-body-sm);color:#fff">info@sizwefs.co.za</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="font:var(--role-caption);text-transform:uppercase;letter-spacing:var(--tracking-caps);color:var(--sl-blue-300)">Pages</div>
+        <a href="Sizwe-Group.dc.html" style="font:var(--role-body-sm);color:var(--sl-grey-300)">The group</a>
+        <a href="Sizwe-Products.dc.html" style="font:var(--role-body-sm);color:var(--sl-grey-300)">Products &amp; services</a>
+        <a href="Sizwe-Resources.dc.html" style="font:var(--role-body-sm);color:var(--sl-grey-300)">Resources</a>
+        <a href="Sizwe-Careers.dc.html" style="font:var(--role-body-sm);color:var(--sl-grey-300)">Careers</a>
+        <a href="Sizwe-Contact.dc.html" style="font:var(--role-body-sm);color:var(--sl-grey-300)">Contact</a>
+        <a href="Sizwe-Book.dc.html" style="font:var(--role-body-sm);color:var(--sl-grey-300)">Book a session</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="font:var(--role-caption);text-transform:uppercase;letter-spacing:var(--tracking-caps);color:var(--sl-blue-300)">Legal</div>
+        <a href="https://www.sanlam.com/terms-of-use.php" style="font:var(--role-body-sm);color:var(--sl-grey-300)">Terms of use</a>
+        <a href="https://www.sanlam.com/sanlams-privacy-policy.php" style="font:var(--role-body-sm);color:var(--sl-grey-300)">Privacy policy</a>
+        <a href="https://www.linkedin.com/company/sizwe-wealth-pty-ltd/" style="font:var(--role-body-sm);color:var(--sl-grey-300)">LinkedIn</a>
+        <a href="https://www.facebook.com/SizweWealth" style="font:var(--role-body-sm);color:var(--sl-grey-300)">Facebook</a>
+      </div>
+    </div>
+    <div style="max-width:1180px;margin:0 auto;padding:20px 28px 48px;border-top:1px solid rgba(255,255,255,0.12)">
+      <p style="margin:0;font:var(--role-caption);color:rgba(255,255,255,0.6);max-width:820px">Sanlam Life Insurance Ltd is a licensed financial services provider. Kapital Bluestar is an authorised financial services provider operating under the Sanlam Blue Star model. Terms and conditions apply; returns are not guaranteed.</p>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280}}">
+const TOPICS = [
+  {
+    id: 'meeting', label: 'Your first meeting',
+    questions: [
+      { q: 'What actually happens in the first meeting?', a: ['We ask questions. Where your income comes from, who depends on it, what debt you carry, what cover and savings you already hold, and what you want the next ten years to look like.', 'You do not need to decide anything. Most first meetings end with us going away to do the numbers and coming back with a written plan.'] },
+      { q: 'How long does it take, and where?', a: ['Thirty to sixty minutes. At our office on Reid Street, at your home or workplace, or on a video call — whichever is easiest.'] },
+      { q: 'What does it cost?', a: ['The first meeting and the plan we write for you are free. If you take out a product, we are paid a commission by the provider, and that amount is written into your plan in rands before you sign anything.'] },
+      { q: 'Am I committing to anything?', a: ['No. You can take the written plan and act on none of it. We would rather you understood your position and did nothing than signed something you did not follow.'] }
+    ]
+  },
+  {
+    id: 'documents', label: 'What to bring',
+    questions: [
+      { q: 'Which documents help most?', a: ['Your latest payslip or a sense of your monthly income and expenses; statements for any policies, retirement funds or investments you already hold; and details of your debt — bond, vehicle finance, credit cards.'] },
+      { q: 'What if I do not have any of that?', a: ['Come anyway. We can work from rough figures and fill in the detail afterwards. Nothing on the list is compulsory.'] },
+      { q: 'Do you need my ID number?', a: ['Only if you would like indicative quotes. Premiums for life and income cover are priced on age, health and occupation, so we cannot give you real numbers without them.'] },
+      { q: 'What about business clients?', a: ['Bring your latest financial statements if you have them, your shareholder or partnership agreement, and a list of staff if you want to discuss employee benefits.'] }
+    ]
+  },
+  {
+    id: 'bluestar', label: 'What Blue Star means',
+    questions: [
+      { q: 'Are you Sanlam, or are you independent?', a: ['Both, in a specific sense. Kapital Bluestar is a Sanlam Blue Star branch: a locally owned advisory practice, operating under Sanlam\'s licence, systems and accreditation. We own and run the practice; the products we advise on are Sanlam\'s.'] },
+      { q: 'Why does that matter to me?', a: ['Local accountability with institutional strength. Your adviser is in Bloemfontein and answerable to you. Your policy sits with a group that has been in business since 1918.'] },
+      { q: 'Who regulates you?', a: ['Representatives are registered with the Financial Sector Conduct Authority and work under the group\'s FSP licence. Every recommendation is documented in a record of advice that you receive and keep.'] },
+      { q: 'Do you only advise on Sanlam products?', a: ['Our insurance, investment and retirement advice is on the Sanlam range. Accounting and tax work is handled in-house by Kapital Accounting.'] }
+    ]
+  },
+  {
+    id: 'changes', label: 'Changing a policy',
+    questions: [
+      { q: 'How do I increase or reduce my cover?', a: ['Call your adviser. Increases in life or income cover usually need fresh underwriting; reductions normally take effect from the next premium date. Either way we will show you the new premium before anything changes.'] },
+      { q: 'What if I cannot afford my premium this month?', a: ['Speak to us before the debit order bounces. There are usually options — a premium holiday, a reduced benefit, or a change in payment date — that keep the policy alive. Lapsing and re-applying later almost always costs more.'] },
+      { q: 'How do I cancel?', a: ['Put the request to your adviser in writing and we will process it. If you are within the cooling-off period, you may be entitled to a refund of premiums paid. We will always ask what changed first, in case there is a better answer than cancelling.'] },
+      { q: 'My details have changed. Who do I tell?', a: ['Tell your adviser, or call the office on 078 019 8359. Banking details, address, beneficiaries and marital status all matter for a claim, so keep them current.'] }
+    ]
+  }
+];
+
+class Component extends DCLogic {
+  state = { topic: 'meeting', open: 0 };
+  renderVals() {
+    const active = TOPICS.find(t => t.id === this.state.topic) || TOPICS[0];
+    return {
+      activeLabel: active.label,
+      topics: TOPICS.map(t => {
+        const on = t.id === active.id;
+        return {
+          label: t.label,
+          count: t.questions.length + ' questions',
+          bg: on ? 'var(--surface-tint)' : 'transparent',
+          bar: on ? 'var(--color-primary)' : 'transparent',
+          fg: on ? 'var(--sl-blue-congress)' : 'var(--text-body)',
+          select: () => this.setState({ topic: t.id, open: 0 })
+        };
+      }),
+      questions: active.questions.map((row, i) => ({
+        q: row.q,
+        a: row.a,
+        open: this.state.open === i,
+        rotate: this.state.open === i ? 'rotate(180deg)' : 'rotate(0deg)',
+        toggle: () => this.setState(s => ({ open: s.open === i ? -1 : i }))
+      }))
+    };
+  }
+}
+</script>
+</body>
+</html>
